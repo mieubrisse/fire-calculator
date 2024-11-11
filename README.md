@@ -5,8 +5,14 @@ This small Python CLI takes in several variables, and predicts how many years un
 It accounts for inflation, different monetary needs at different points in time (e.g. you probably don't need as much money when you're 80 as when you're 40), etc.
 
 ### Usage
-To use, run `python early-retirement-cli.py -h` and fill in the required positional args:
+To use, run `python early-retirement-cli.py -h` and fill in the required positional args like retirement balance today, annual contribution, years-to-live, inflation, expected growth rate, etc.
 
+Optionally, you can also include flags to add more detail to the scenario:
+- `-i` to change your retirement income in X years (e.g. maybe when you're 60 you expect to need less money)
+- `-w` to model changes in your account balance in X years (e.g. maybe you expect to inherit some money in 10 years)
+- `-c` to model changes to your annual contribution rate in X years
+
+Full usage:
 ```
 usage: early-retirement-cli.py [-h] [-w years_out value] [-c years_out contrib contrib_rate] [-i years_out net_income] [--no-table]
                                current_savings annual_contribution annual_contrib_increase_rate pre_growth_rate post_growth_rate inflation_rate years_to_live net_retirement_income
